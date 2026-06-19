@@ -4,56 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object Pose Distribution Estimation for Determining Revolution and Reflection Uncertainty in Point Clouds</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        img {
-            width: 20vw;
-            height: auto;
-        }
-        .links {
-            margin-top: 20px;
-        }
-        .citation {
-            margin-top: 20px;
-            font-family: monospace;
-            text-align: left;
-            display: inline-block;
-        }
-        
-    </style>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Object Pose Distribution Estimation for Determining Revolution and Reflection Uncertainty in Point Clouds</h1>
+    <header>
+        <h1>Object Pose Distribution Estimation for Determining Revolution and Reflection Uncertainty in Point Clouds</h1>
+    </header>
 
-    <img src="frontpage_image.png" alt="Fig. 1 from the paper showing pose distributions for two different views of the same object.">
-    <p>The pose distribution estimate of our method is shown for both unambiguous and ambiguous views.
-        The top images display the test object in two different poses. Below, the distribution estimates are visualized. 
-        The red line indicates the probability of each revolution. 
-        The dotted green line shows the same revolution probability for the reflected pose. 
-        In the left image, the object’s indent is visible, allowing for a single object pose to be identified. 
-        In the right image, the indent is not visible, resulting in a much larger pose distribution in both revolution and reflection.</p>
+    <main>
+        <section class="description">
+            <p>
+                Object pose estimation is crucial to robotic perception 
+                and typically provides a single-pose estimate. However, a
+                single estimate cannot capture pose uncertainty deriving from
+                visual ambiguity, which can lead to unreliable behavior. Existing
+                pose distribution methods rely heavily on color information, often
+                unavailable in industrial settings.
+                We propose a novel neural network-based method for estimating 
+                object pose uncertainty using only 3D colorless data.
+                To the best of our knowledge, this is the first approach that
+                leverages deep learning for pose distribution estimation without
+                relying on RGB input. We validate our method in a real-world
+                bin picking scenario with objects of varying geometric ambiguity.
+                Our current implementation focuses on symmetries in reflection
+                and revolution, but the framework is extendable to full SE(3) pose
+                distribution estimation.
+            </p>
+        </section>
 
-    
-    <div class="links">
-        <a href="https://github.com/fhagelskjaer/opde3d">Code</a> |
-        <a href="https://arxiv.org/abs/2512.07211">Paper</a>
-    </div>
 
-    <div class="citation">
-        <b> To cite:</b> <br>
-        @article{hagelskjaer2025object,<br>
-          &nbsp;&nbsp;title={Object Pose Distribution Estimation for Determining Revolution and Reflection Uncertainty in Point Clouds},<br>
-          &nbsp;&nbsp;author={Hagelskj{\ae}r, Frederik and Arapis, Dimitrios and Madsen, Steffen and Iversen, Thorbj{\o}rn Mosekj{\ae}r},<br>
-          &nbsp;&nbsp;journal={arXiv preprint arXiv:2512.07211},<br>
-          &nbsp;&nbsp;year={2025}<br>
-        }
-    </div>
-    
+        <section class="links">
+            <h2>Current Development</h2>
+            <div class="link-grid">
+                <a href="https://github.com/fhagelskjaer/opde3d" class="link-card">
+                    <h3>🔬 Ongoing Research</h3>
+                    <p>This paper is part of an ongoing research project to develop a comprehensive framework for pose distribution estimation in robotic perception.</p>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="links">
+            <h2>Related Resources</h2>
+            <div class="link-grid">
+                <a href="https://arxiv.org/abs/2512.07211" class="link-card">
+                    <h3>📄 Paper</h3>
+                    <p>Read the full research paper</p>
+                </a>
+                <a href="https://github.com/fhagelskjaer/opde3d" class="link-card">
+                    <h3>💻 Code Repository</h3>
+                    <p>View the source code on GitHub</p>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="description">
+            <h2>Figure</h2>
+            <div style="display: flex; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+                <p style="flex: 1; min-width: 280px;">
+                    The pose distribution estimate of our method is shown for both unambiguous and ambiguous views.
+                    The top images display the test object in two different poses. Below, the distribution estimates are visualized. 
+                    The red line indicates the probability of each revolution. 
+                    The dotted green line shows the same revolution probability for the reflected pose. 
+                    In the left image, the object’s indent is visible, allowing for a single object pose to be identified. 
+                    In the right image, the indent is not visible, resulting in a much larger pose distribution in both revolution and reflection.
+                </p>
+                <img src="frontpage_image.png" alt="Front page illustration" style="max-width: 600px; width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </section>
+
+
+        <section class="videos">
+            <h2>Demonstration Video</h2>
+            
+            <div class="video-container" style="display: flex; justify-content: center;">
+                <!-- Local Video Example -->
+                <video controls>
+                    <source src="videos/iccr_81.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="citation">
+            <h2>Citation</h2>
+            <pre><code>@article{hagelskjaer2025object,
+  title={Object Pose Distribution Estimation for Determining Revolution and Reflection Uncertainty in Point Clouds},
+  author={Hagelskj{\ae}r, Frederik and Arapis, Dimitrios and Madsen, Steffen and Iversen, Thorbj{\o}rn Mosekj{\ae}r},
+  journal={arXiv preprint arXiv:2512.07211},
+  year={2025}
+}
+</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Research Project</p>
+    </footer>
 </body>
-    
 </html>
